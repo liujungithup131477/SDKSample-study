@@ -114,6 +114,15 @@
  */
 +(BOOL) openWXApp;
 
+/**
+ *  如果你的程序要发消息给微信，那么需要调用WXApi的sendReq函数：
+ *
+ *  @param req 其中req参数为SendMessageToWXReq类型。
+ *
+ *  需要注意的是，SendMessageToWXReq的scene成员，如果scene填WXSceneSession，那么消息会发送至微信的会话内。
+ *  如果scene填WXSceneTimeline，那么消息会发送至朋友圈。如果scene填WXSceneFavorite,那么消息会发送到“我的收藏”中。
+ *  scene默认值为WXSceneSession。
+ */
 // MARK: - 发送请求到微信
 /*! @brief 发送请求到微信，等待微信返回onResp
  *
