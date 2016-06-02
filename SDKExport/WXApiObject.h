@@ -236,19 +236,19 @@ enum WXAPISupport {
 
 +(WXMediaMessage *) message;
 
-/** 标题 
+/** 标题  --微信分享视屏的标题
  * @note 长度不能超过512字节
  */
 @property (nonatomic, retain) NSString *title;
-/** 描述内容 
+/** 描述内容  --分享出去的视屏的描述信息
  * @note 长度不能超过1K
  */
 @property (nonatomic, retain) NSString *description;
-/** 缩略图数据 
+/** 缩略图数据  --分享到微信的视屏中的缩略图
  * @note 大小不能超过32K
  */
 @property (nonatomic, retain) NSData   *thumbData;
-/** todo
+/** todo --媒体资源的标志名
  * @note 长度不能超过64字节
  */
 @property (nonatomic, retain) NSString *mediaTagName;
