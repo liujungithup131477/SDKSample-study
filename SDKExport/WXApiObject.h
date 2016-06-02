@@ -417,6 +417,7 @@ enum WXAPISupport {
 @end
 
 /*! @brief 多媒体消息中包含的表情数据对象
+ *  --可以处理静态图，也可以处理动态图
  *
  * 微信终端和第三方程序之间传递消息中包含的表情数据对象。
  * @see WXMediaMessage
@@ -436,6 +437,9 @@ enum WXAPISupport {
 
 @end
 
+/**
+ *  发送文件消息给微信
+ */
 /*! @brief todo
  *
  * @see WXMediaMessage
