@@ -70,7 +70,7 @@
 }
 
 /**
- *  处理请求的方法
+ *  这里用来处理微信向第三方应用程序发送消息之后的第三方想做的处理。
  */
 -(void) onReq:(BaseReq*)req
 {
@@ -112,9 +112,12 @@
     }
 }
 
+/**
+ *  微信终端接收到第三方应用程序发给它的消息后，做出的响应消息
+ */
 -(void) onResp:(BaseResp*)resp
 {
-    if([resp isKindOfClass:[SendMessageToWXResp class]])
+    if([resp isKindOfClass:[SendMessageToWXResp class]]) //第三方程序向微信终端发送SendMessageToWXReq后，微信发送回来的处理结果，该结果用SendMessageToWXResp表示。
     {
         NSString *strTitle = [NSString stringWithFormat:@"发送媒体消息结果"];
         NSString *strMsg = [NSString stringWithFormat:@"errcode:%d", resp.errCode];
