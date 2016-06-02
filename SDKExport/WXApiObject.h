@@ -138,13 +138,13 @@ enum WXAPISupport {
 /*! @brief 第三方程序发送消息至微信终端程序的消息结构体
  *
  * 第三方程序向微信发送信息需要传入SendMessageToWXReq结构体，信息类型包括文本消息和多媒体消息，
- * 分别对应于text和message成员。调用该方法后，微信处理完信息会向第三方程序发送一个处理结果。
+ * 分别对应于text和message成员。调用该方法后，微信处理完信息会向第三方程序发送一个处理结果--（以弹窗视图的方式给第三方应用程序反馈）。
  * @see SendMessageToWXResp
  */
 @interface SendMessageToWXReq : BaseReq
 /** 发送消息的文本内容
  * @note 文本长度必须大于0且小于10K
- * 目前不清楚的用法
+ * 分享文本消息时使用
  */
 @property (nonatomic, retain) NSString* text;
 /** 发送消息的多媒体内容
