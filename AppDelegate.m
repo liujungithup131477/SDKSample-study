@@ -271,18 +271,26 @@
 //    message.description = @"饿着肚皮，傻逼着。";
     message.description = @"库里，蠢货！！！";
 //    [message setThumbImage:[UIImage imageNamed:@"res7.jpg"]];
-    [message setThumbImage:[UIImage imageNamed:@"444"]];
+    [message setThumbImage:[UIImage imageNamed:@"444.jpg"]];
+//    NSData *thumbImage = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"444.jpg" ofType:nil]];
+//    message.thumbData = thumbImage;
+//    message.mediaTagName = @"库里，你不可能夺冠！！！";
+    message.messageExt = @"王晓晨";
     
     WXVideoObject *ext = [WXVideoObject object];
 //    ext.videoUrl = @"http://v.youku.com/v_show/id_XNTUxNDY1NDY4.html";
     ext.videoUrl = @"http://v.qq.com/cover/t/t5b6vt6yizxmmqj.html?vid=s002034xc81&ptag=baidu.v.ald.nba";
+//    ext.videoUrl = @"http://v.qq.com/page/m/q/4/m0301142iq4.html";
     
     message.mediaObject = ext;
     
+    /** 发送消息给微信终端*/
     SendMessageToWXReq* req = [[[SendMessageToWXReq alloc] init]autorelease];
     req.bText = NO;
     req.message = message;
     req.scene = _scene;
+    //测试内容
+//    req.text = @"王晓晨";
     
     [WXApi sendReq:req];
 }
