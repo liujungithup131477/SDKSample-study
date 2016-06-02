@@ -69,9 +69,12 @@
     }
 }
 
+/**
+ *  处理请求的方法
+ */
 -(void) onReq:(BaseReq*)req
 {
-    if([req isKindOfClass:[GetMessageFromWXReq class]])
+    if([req isKindOfClass:[GetMessageFromWXReq class]]) //判断此请求是不是微信终端向第三方应用程序请求内容的请求
     {
         // 微信请求App提供内容， 需要app提供内容后使用sendRsp返回
         NSString *strTitle = [NSString stringWithFormat:@"微信请求App提供内容"];
@@ -82,7 +85,7 @@
         [alert show];
         [alert release];
     }
-    else if([req isKindOfClass:[ShowMessageFromWXReq class]])
+    else if([req isKindOfClass:[ShowMessageFromWXReq class]]) //判断此请求是不是微信终端请求第三方应用程序显示/处理某些内容
     {
         ShowMessageFromWXReq* temp = (ShowMessageFromWXReq*)req;
         WXMediaMessage *msg = temp.message;
@@ -97,7 +100,7 @@
         [alert show];
         [alert release]; 
     }
-    else if([req isKindOfClass:[LaunchFromWXReq class]])
+    else if([req isKindOfClass:[LaunchFromWXReq class]])  //判断此请求是不是微信终端打开第三方应用时请求
     {
         //从微信启动App
         NSString *strTitle = [NSString stringWithFormat:@"从微信启动"];
