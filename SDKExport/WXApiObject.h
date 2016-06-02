@@ -188,7 +188,13 @@ enum WXAPISupport {
  * 需要第三方程序调用sendResp返回一个GetMessageFromWXResp消息结构体。
  */
 @interface GetMessageFromWXReq : BaseReq
+/**
+ *  语言
+ */
 @property (nonatomic, retain) NSString* lang;
+/**
+ *  国家/地区
+ */
 @property (nonatomic, retain) NSString* country;
 @end
 
