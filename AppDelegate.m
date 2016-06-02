@@ -266,12 +266,16 @@
 -(void) sendVideoContent
 {
     WXMediaMessage *message = [WXMediaMessage message];
-    message.title = @"乔布斯访谈";
-    message.description = @"饿着肚皮，傻逼着。";
-    [message setThumbImage:[UIImage imageNamed:@"res7.jpg"]];
+//    message.title = @"乔布斯访谈";
+    message.title = @"库里，盖死你";
+//    message.description = @"饿着肚皮，傻逼着。";
+    message.description = @"库里，蠢货！！！";
+//    [message setThumbImage:[UIImage imageNamed:@"res7.jpg"]];
+    [message setThumbImage:[UIImage imageNamed:@"444"]];
     
     WXVideoObject *ext = [WXVideoObject object];
-    ext.videoUrl = @"http://v.youku.com/v_show/id_XNTUxNDY1NDY4.html";
+//    ext.videoUrl = @"http://v.youku.com/v_show/id_XNTUxNDY1NDY4.html";
+    ext.videoUrl = @"http://v.qq.com/cover/t/t5b6vt6yizxmmqj.html?vid=s002034xc81&ptag=baidu.v.ald.nba";
     
     message.mediaObject = ext;
     
