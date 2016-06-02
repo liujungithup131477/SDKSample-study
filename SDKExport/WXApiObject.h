@@ -35,6 +35,7 @@ enum WXAPISupport {
     WXAPISupportSession = 0,
 };
 
+#pragma mark - 微信终端SDK所有请求类和响应类的基类
 /*! @brief 该类为微信终端SDK所有请求类的基类
  *
  */
@@ -61,6 +62,7 @@ enum WXAPISupport {
 
 @end
 
+#pragma mark - 第三方向微信终端发起支付的消息结构体
 @class WXMediaMessage;
 
 /*! @brief 第三方向微信终端发起支付的消息结构体
@@ -85,6 +87,7 @@ enum WXAPISupport {
 
 @end
 
+#pragma mark - 微信终端返回给第三方的关于支付结果的结构体
 /*! @brief 微信终端返回给第三方的关于支付结果的结构体
  *
  *  微信终端返回给第三方的关于支付结果的结构体
@@ -96,6 +99,7 @@ enum WXAPISupport {
 
 @end
 
+#pragma mark - 第三方程序向微信终端请求认证的消息结构
 /*! @brief 第三方程序向微信终端请求认证的消息结构
  *
  * 第三方程序要向微信申请认证，并请求某些权限，需要调用WXApi的sendReq成员函数，
@@ -114,6 +118,7 @@ enum WXAPISupport {
 @property (nonatomic, retain) NSString* state;
 @end
 
+#pragma mark - 微信处理完第三方程序的认证和权限申请后向第三方程序回送的处理结果
 /*! @brief 微信处理完第三方程序的认证和权限申请后向第三方程序回送的处理结果。
  *
  * 第三方程序要向微信申请认证，并请求某些权限，需要调用WXApi的sendReq成员函数，向微信终端发送一个SendAuthReq消息结构。
@@ -135,6 +140,8 @@ enum WXAPISupport {
 // @property (nonatomic, retain) NSDate* expireDate;
 @end
 
+#pragma mark - 发送给微信终端的消息实体和微信终端返回给第三方应用程序的响应信息
+// MARK: - request：第三方程序发送消息至微信终端程序的消息结构体
 /*! @brief 第三方程序发送消息至微信终端程序的消息结构体
  *
  * 第三方程序向微信发送信息需要传入SendMessageToWXReq结构体，信息类型包括文本消息和多媒体消息，
@@ -162,6 +169,10 @@ enum WXAPISupport {
 
 @end
 
+// MARK: - respond：微信终端接收到第三方应用程序发给它的消息后，做出的响应消息
+/**
+ *  respond：微信终端接收到第三方应用程序发给它的消息后，做出的响应消息
+ */
 /*! @brief 微信终端向第三方程序返回的SendMessageToWXReq处理结果。
  *
  * 第三方程序向微信终端发送SendMessageToWXReq后，微信发送回来的处理结果，该结果用SendMessageToWXResp表示。
