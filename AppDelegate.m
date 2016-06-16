@@ -90,6 +90,7 @@
         ShowMessageFromWXReq* temp = (ShowMessageFromWXReq*)req;
         WXMediaMessage *msg = temp.message;
         
+        
         //显示微信传过来的内容
         WXAppExtendObject *obj = msg.mediaObject;
         
@@ -113,8 +114,9 @@
 }
 
 /**
- *  微信终端接收到第三方应用程序发给它的消息后，做出的响应消息
+ *  第三方应用程序收到微信终端返回给它的消息后，做出的响应消息
  */
+
 -(void) onResp:(BaseResp*)resp
 {
     if([resp isKindOfClass:[SendMessageToWXResp class]]) //第三方程序向微信终端发送SendMessageToWXReq后，微信发送回来的处理结果，该结果用SendMessageToWXResp表示。
@@ -199,7 +201,7 @@
     [message setThumbImage:[UIImage imageNamed:@"res2.png"]];
     
     WXWebpageObject *ext = [WXWebpageObject object];
-    ext.webpageUrl = @"http://tech.qq.com/zt2012/tmtdecode/252.htm";
+    ext.webpageUrl = @"https://aplman.com/p/hello.html";
     
     message.mediaObject = ext;
     
@@ -219,7 +221,8 @@
     [message setThumbImage:[UIImage imageNamed:@"res2.png"]];
     
     WXWebpageObject *ext = [WXWebpageObject object];
-    ext.webpageUrl = @"http://tech.qq.com/zt2012/tmtdecode/252.htm";
+//    ext.webpageUrl = @"http://tech.qq.com/zt2012/tmtdecode/252.htm";
+    ext.webpageUrl = @"https://aplman.com/p/hello.html";
     
     message.mediaObject = ext;
     
@@ -537,4 +540,10 @@
 {
 }
 
+
+//#pragma mark - Universal Links
+//-(BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler {
+//
+//    return YES;
+//}
 @end

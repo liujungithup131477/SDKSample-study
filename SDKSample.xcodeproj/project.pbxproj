@@ -44,6 +44,7 @@
 /* Begin PBXFileReference section */
 		199D982A1806D3B4008AC26B /* 1234.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1234.jpg; sourceTree = SOURCE_ROOT; };
 		199D982C1807D9AC008AC26B /* res5thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = res5thumb.png; sourceTree = SOURCE_ROOT; };
+		2827CF641D12790C009D843B /* SDKSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SDKSample.entitlements; sourceTree = SOURCE_ROOT; };
 		28643E2D1CFFD3340094BF7A /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		28643E2E1CFFD3340094BF7A /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		28643E2F1CFFD3340094BF7A /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 		F05029A31505F71800C3E5E5 /* SDKSample */ = {
 			isa = PBXGroup;
 			children = (
+				2827CF641D12790C009D843B /* SDKSample.entitlements */,
 				F0502A351505FE3D00C3E5E5 /* AppDelegate.h */,
 				F0502A361505FE3D00C3E5E5 /* AppDelegate.m */,
 				F0502A371505FE3D00C3E5E5 /* SendMsgToWeChatViewController.h */,
@@ -218,6 +220,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				TargetAttributes = {
+					F05029981505F71700C3E5E5 = {
+						DevelopmentTeam = K259LN949A;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = F05029931505F71700C3E5E5 /* Build configuration list for PBXProject "SDKSample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -364,6 +379,7 @@
 		F05029BB1505F71800C3E5E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SDKSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -375,6 +391,7 @@
 					"\"$(SRCROOT)/../SDKExport\"",
 					"$(PROJECT_DIR)/SDKExport",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pptv.iphoneapp.SDKSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -384,6 +401,7 @@
 		F05029BC1505F71800C3E5E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SDKSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -395,6 +413,7 @@
 					"\"$(SRCROOT)/../SDKExport\"",
 					"$(PROJECT_DIR)/SDKExport",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pptv.iphoneapp.SDKSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
