@@ -202,6 +202,7 @@
     
     WXWebpageObject *ext = [WXWebpageObject object];
     ext.webpageUrl = @"https://aplman.com/p/hello.html";
+//    ext.webpageUrl = @"http://3g.163.com/ntes/special/0034073A/article_share.html?docid=BPJ916SH00051CA1&spst=0&spss=newsapp&spsf=wx&spsw=1&from=singlemessage&isappinstalled=1";
     
     message.mediaObject = ext;
     
@@ -223,6 +224,7 @@
     WXWebpageObject *ext = [WXWebpageObject object];
 //    ext.webpageUrl = @"http://tech.qq.com/zt2012/tmtdecode/252.htm";
     ext.webpageUrl = @"https://aplman.com/p/hello.html";
+//    ext.webpageUrl = @"http://3g.163.com/ntes/special/0034073A/article_share.html?docid=BPJ916SH00051CA1&spst=0&spss=newsapp&spsf=wx&spsw=1&from=singlemessage&isappinstalled=1";
     
     message.mediaObject = ext;
     
@@ -541,9 +543,9 @@
 }
 
 
-//#pragma mark - Universal Links
-//-(BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler {
-//
-//    return YES;
-//}
+#pragma mark - Universal Links
+-(BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler {
+
+    return YES;
+}
 @end
