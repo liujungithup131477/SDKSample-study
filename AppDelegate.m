@@ -201,7 +201,7 @@
     [message setThumbImage:[UIImage imageNamed:@"res2.png"]];
     
     WXWebpageObject *ext = [WXWebpageObject object];
-    ext.webpageUrl = @"https://aplman.com/p/hello.html";
+    ext.webpageUrl = @"http://quickbuyer.cn:8000/autoback.html";
 //    ext.webpageUrl = @"http://3g.163.com/ntes/special/0034073A/article_share.html?docid=BPJ916SH00051CA1&spst=0&spss=newsapp&spsf=wx&spsw=1&from=singlemessage&isappinstalled=1";
     
     message.mediaObject = ext;
@@ -223,7 +223,7 @@
     
     WXWebpageObject *ext = [WXWebpageObject object];
 //    ext.webpageUrl = @"http://tech.qq.com/zt2012/tmtdecode/252.htm";
-    ext.webpageUrl = @"https://aplman.com/p/hello.html";
+    ext.webpageUrl = @"https://aplman.com/newsapp/applinks.html";
 //    ext.webpageUrl = @"http://3g.163.com/ntes/special/0034073A/article_share.html?docid=BPJ916SH00051CA1&spst=0&spss=newsapp&spsf=wx&spsw=1&from=singlemessage&isappinstalled=1";
     
     message.mediaObject = ext;
@@ -336,6 +336,9 @@
     WXAppExtendObject *ext = [WXAppExtendObject object];
     ext.extInfo = @"<xml>extend info</xml>";
     ext.url = @"http://www.qq.com";
+//    ext.url = @"https://aplman.com/newsapp/applinks.html";
+//    ext.url = @"https://aplman.com/newsapp/applinks.html";
+//    ext.url = @"http://m.163.com/newsapp/applinks.html";
     
     Byte* pBuffer = (Byte *)malloc(BUFFER_SIZE);
     memset(pBuffer, 0, BUFFER_SIZE);
